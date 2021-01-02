@@ -1,0 +1,13 @@
+{
+  "name": "rpg-ui",
+  "title": "RPG UI",
+  "description": "An RPG Style ui for Foundry. DnD5e",
+  "version": "0.1.0",
+  "author": "MXCilik",
+  "scripts": [ ],
+  "styles": [ "./rpg-ui.css" ],
+  "esmodules": [ "./modules/init.js" ],
+  "packs": [],
+  "minimumCoreVersion": "0.7.6",
+  "compatibleCoreVersion": "0.7.8"
+}

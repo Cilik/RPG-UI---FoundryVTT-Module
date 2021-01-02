@@ -1,0 +1,197 @@
+#hotbar {
+  left: 50%;
+  margin-left: -290px; }
+
+#players {
+  display: none !important; }
+
+#user-frame-ui {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 792px;
+  height: 108px;
+  margin-left: -396px;
+  background: url("assets/img/statbar.png") top left;
+  z-index: 68; }
+
+#player-hp {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  margin-left: 294px;
+  z-index: 70;
+  box-shadow: inset 0 0 30px #000000; }
+  #player-hp .current {
+    line-height: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #f1f1f1;
+    display: none; }
+  #player-hp:hover .current {
+    display: block !important; }
+
+.ss-container {
+  height: 25px;
+  display: inline-block;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  z-index: 100; }
+
+.player-spell-slot {
+  height: 25px;
+  width: 25px;
+  box-shadow: inset 0 0 10px #000000;
+  display: table;
+  /*border: 1px solid ;
+    border-image: radial-gradient(#00a5e5, #003144) 1;*/
+  float: left;
+  margin-left: 5px;
+  border-radius: 100%; }
+  .player-spell-slot .count {
+    color: #ffffff;
+    display: table-cell;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: center; }
+  .player-spell-slot .over {
+    color: #9c4a4a;
+    display: none;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: center; }
+  .player-spell-slot:hover .count {
+    display: none; }
+  .player-spell-slot:hover .over {
+    display: table-cell; }
+
+.player-spell-slot.hidden {
+  display: none; }
+
+.experience-container {
+  height: 8px;
+  width: 580px;
+  position: fixed;
+  bottom: 65px;
+  left: 50%;
+  z-index: 65;
+  background-color: #636363;
+  margin-left: -291px;
+  box-shadow: inset 0 0 10px #000000; }
+  .experience-container .experience-bar {
+    height: 8px;
+    float: left;
+    background-color: #39c540;
+    text-align: #ffffff;
+    text-align: left; }
+
+#player-image {
+  height: 110px;
+  width: 110px;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  z-index: 65;
+  margin-left: -398px; }
+  #player-image img {
+    width: 100%;
+    height: 100%;
+    border: 0 none; }
+
+#player-ac {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  width: 30px;
+  height: 36px;
+  margin-left: -316px;
+  background: url(assets/img/shield.png) top left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+  #player-ac .current {
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400; }
+
+#player-torch {
+  position: fixed;
+  bottom: 75px;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin-left: -315px;
+  box-shadow: inset 0 0 10px #000000;
+  border-radius: 100%;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #666666;
+  cursor: pointer; }
+  #player-torch .back {
+    background: url(assets/img/torch.png) top left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%; }
+  #player-torch.off {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray; }
+  #player-torch.on {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    cursor: pointer; }
+
+#player-resources {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999; }
+  #player-resources .resource {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    /*background: rgba(30,30,30,0.7);*/
+    background-color: #222222;
+    border: 1px solid gold;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px #7a7971;
+    padding: 15px;
+    padding-bottom: 20px; }
+    #player-resources .resource .label {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 5px; }
+    #player-resources .resource .bar {
+      height: 20px;
+      border-radius: 5px;
+      box-shadow: inset 0 0 30px #000000; }
+      #player-resources .resource .bar .current {
+        line-height: 20px;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        font-weight: 400; }

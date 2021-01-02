@@ -1,0 +1,83 @@
+<div id="user-frame-ui" class="{{#if this.character}}hide{{/if}}"></div>
+<div id="player-hp" class="{{#if this.hp}}hide{{/if}}"
+    style="background:linear-gradient({{#if this.hp.pos}}#2d0000 {{this.hp.percentage}}%, #e50000 {{this.hp.percentage}}%{{else}}#777777 {{this.hp.percentage}}%, #2d0000 {{this.hp.percentage}}%{{/if}})">
+<div class="current">
+    {{this.hp.current}} / {{this.hp.max}}
+</div>
+</div>
+<div id="player-image">
+    <img src="/{{this.image}}" />
+</div>
+<div class="experience-container">
+    <div class="experience-bar" style="width: {{this.xp.pct}}%;">
+
+    </div>
+</div>
+<div class="ss-container">
+    <div id="player-ss-1" class="player-spell-slot {{#hasSpellSlot this.ss 1}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss1.percentage}}%, #33B5FF {{this.ss.ss1.percentage}}%)">
+        <div class="count">{{this.ss.ss1.current}}</div>
+        <div class="over">1</div>
+    </div>
+    <div id="player-ss-2" class="player-spell-slot {{#hasSpellSlot this.ss 2}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss2.percentage}}%, #33B5FF {{this.ss.ss2.percentage}}%)">
+        <div class="count">{{this.ss.ss2.current}}</div>
+        <div class="over">2</div>
+    </div>
+    <div id="player-ss-3" class="player-spell-slot {{#hasSpellSlot this.ss 3}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss3.percentage}}%, #33B5FF {{this.ss.ss3.percentage}}%)">
+        <div class="count">{{this.ss.ss3.current}}</div>
+        <div class="over">3</div>
+    </div>
+    <div id="player-ss-4" class="player-spell-slot {{#hasSpellSlot this.ss 4}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss4.percentage}}%, #33B5FF {{this.ss.ss4.percentage}}%)">
+        <div class="count">{{this.ss.ss4.current}}</div>
+        <div class="over">4</div>
+    </div>
+    <div id="player-ss-5" class="player-spell-slot {{#hasSpellSlot this.ss 5}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss5.percentage}}%, #33B5FF {{this.ss.ss5.percentage}}%)">
+        <div class="count">{{this.ss.ss5.current}}</div>
+        <div class="over">5</div>
+    </div>
+    <div id="player-ss-6" class="player-spell-slot {{#hasSpellSlot this.ss 6}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss6.percentage}}%, #33B5FF {{this.ss.ss6.percentage}}%)">
+        <div class="count">{{this.ss.ss6.current}}</div>
+        <div class="over">6</div>
+    </div>
+    <div id="player-ss-7" class="player-spell-slot {{#hasSpellSlot this.ss 7}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss7.percentage}}%, #33B5FF {{this.ss.ss7.percentage}}%)">
+        <div class="count">{{this.ss.ss7.current}}</div>
+        <div class="over">7</div>
+    </div>
+    <div id="player-ss-8" class="player-spell-slot {{#hasSpellSlot this.ss 8}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss8.percentage}}%, #33B5FF {{this.ss.ss8.percentage}}%)">
+        <div class="count">{{this.ss.ss8.current}}</div>
+        <div class="over">8</div>
+    </div>
+    <div id="player-ss-9" class="player-spell-slot {{#hasSpellSlot this.ss 9}}hidden{{/hasSpellSlot}}"
+        style="background:linear-gradient(#0A3751 {{this.ss.ss9.percentage}}%, #33B5FF {{this.ss.ss9.percentage}}%)">
+        <div class="count">{{this.ss.ss9.current}}</div>
+        <div class="over">9</div>
+    </div>
+</div>
+<div id="player-ac" class="player-ac">
+    <div class="current">
+        {{this.ac}}
+    </div>
+</div>
+<div id="player-torch" class="player-torch {{#if this.torchActive}}on{{else}}off{{/if}}">
+    <div class="back"></div>
+</div>
+<div id="player-resources" class="player-resources">
+    {{#each this.resources}}
+        <div class="resource {{this.class}}">
+            <span class="label">{{this.text}}</span>
+            <div class="bar"
+        style="background:linear-gradient(to right, {{this.light}} {{this.percentage}}%, {{this.dark}} {{this.percentage}}%)">
+                <div class="current">
+                    {{this.current}} / {{this.max}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
