@@ -2,7 +2,7 @@
   "name": "rpg-ui",
   "title": "RPG UI",
   "description": "An RPG Style ui for Foundry. DnD5e",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "MXCilik",
   "scripts": [ ],
   "styles": [ "./rpg-ui.css" ],
